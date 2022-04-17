@@ -8,7 +8,7 @@ import os
 import time
 
 BUCKET_NAME = 'coursework-bucket-s1311448'
-FOLDER_NAME = 'CPDImages/images/'
+FOLDER_NAME = 'CPDCourseworkImagesS1311448/images/'
 
 s3 = boto3.resource('s3')
 jpg_files = glob.glob("CPDImages/images/*.jpg")
@@ -28,11 +28,10 @@ for filename in png_files:
     print("Putting %s as %s" % (filename,key))
     s3.meta.client.upload_file(filename, BUCKET_NAME, key)
     time.sleep(30)
-#For future updates adding a new for function(s) for filetype_files would be added 
 #Check to see if any files are not jpg or png. If file exists notify user.  
 if filename != jpg_files or filename != png_files:
     print ("File not in correct format png & jpg only")
     
-    
+#For future updates adding a new for function(s) for filetype_files would be added     
 #Print Upload complete and inform users only two file types supported.
 print("Upload Complete, Please note only .jpg and .png files are supported any othell not be uploaded")
