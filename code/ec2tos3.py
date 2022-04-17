@@ -11,9 +11,9 @@ BUCKET_NAME = 'coursework-bucket-s1311448'
 FOLDER_NAME = 'CPDCourseworkImagesS1311448/images/'
 
 s3 = boto3.resource('s3')
-jpg_files = glob.glob("CPDImages/images/*.jpg")
-png_files = glob.glob("CPDImages/images/*.png")
-#for future updates addition of new file formats would be done by adding e.g. gif_files = glob.glob(""CPDImages/images/*.")
+jpg_files = glob.glob("CPDCourseworkImagesS1311448/images//images/*.jpg")
+png_files = glob.glob("CPDCourseworkImagesS1311448/images//images/*.png")
+#for future updates addition of new file formats would be done by adding e.g. gif_files = glob.glob("CPDCourseworkImagesS1311448/images//images/*.")
 
 #checks for jpg files and uploads with a timer delay of 30 seconds between each upload
 for filename in jpg_files:
