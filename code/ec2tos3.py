@@ -1,4 +1,3 @@
-#Student Name Tom Hope, ID : S1311448
 #import glob for searching file types
 #import os for filepaths
 #import time to set delays
